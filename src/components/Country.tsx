@@ -65,12 +65,16 @@ const Country: React.FC<{ toggleDark: boolean }> = ({ toggleDark }) => {
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M6.46447 4.10744L7.64298 5.28596L3.75389 9.17504L18.6031 9.17504L18.6031 10.825L3.75389 10.825L7.64298 14.714L6.46447 15.8926L0.57191 10L6.46447 4.10744Z"
-                    fill="#111517"
+                    fill={`${toggleDark ? "#fff" : "#111517"}`}
                   />
                 </g>
               </svg>
             </span>
-            <span className="pl-2">Back</span>
+            <span
+              className={`pl-2 ${toggleDark ? "text-white" : "text-black"}`}
+            >
+              Back
+            </span>
           </Link>
 
           <div className="flex flex-col md:flex-row items-start md:items-center w-full h-4/5">
@@ -139,7 +143,7 @@ const Country: React.FC<{ toggleDark: boolean }> = ({ toggleDark }) => {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-row flex-wrap justify-start items-center">
+                <div className="flex flex-row flex-wrap gap-y-4 justify-start items-center">
                   <span className="pr-4">Border Countries:</span>{" "}
                   {borders &&
                     borders.map((border: string) => (
