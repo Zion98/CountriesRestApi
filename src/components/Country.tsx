@@ -18,7 +18,6 @@ const Country: React.FC<{ toggleDark: boolean }> = ({ toggleDark }) => {
         `https://restcountries.com/v2/alpha/${countryName}`
       );
       setCountry(data.data);
-      console.log(data.data, "cb");
       setloading(false);
     } catch (error) {
       setloading(false);
@@ -43,7 +42,6 @@ const Country: React.FC<{ toggleDark: boolean }> = ({ toggleDark }) => {
     borders,
   } = country;
 
-  console.log({ country });
   return (
     <CountryStyle className="px-12 h-screen">
       {loading ? (

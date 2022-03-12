@@ -6,7 +6,6 @@ const NavBar: React.FC<{ toggleDark: boolean; handleToggle: () => void }> = ({
   toggleDark,
   handleToggle,
 }) => {
-  console.log({ toggleDark });
   return (
     <Navbar2
       className={`flex flex-row justify-between items-center px-12 py-4 ${
