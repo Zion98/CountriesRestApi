@@ -45,7 +45,7 @@ const Country: React.FC<{ toggleDark: boolean }> = ({ toggleDark }) => {
   return (
     <CountryStyle className="px-12 h-screen">
       {loading ? (
-        <div className="flex justify-center items-center h-screen w-screen">
+        <div className="flex justify-center items-center h-screen">
           <Loader width={20} size={10} />
         </div>
       ) : (
